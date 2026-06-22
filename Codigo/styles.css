@@ -226,7 +226,8 @@ a:hover {
 
 .about-img-box img {
     width: 100%;
-    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
     border-radius: 50%;
     border: 2px solid var(--border);
     margin-bottom: 0.75rem;
@@ -278,10 +279,10 @@ a:hover {
    ========================================================== */
 .projects-container {
     display: grid;             /* CSS GRID habilitado */
-    /* Crea columnas responsivas dinámicas, con al menos 4 elementos */
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 1.5rem;
     margin-top: 2rem;
+    justify-content: center;   /* Centra la columna si hay pocos elementos */
 }
 
 .project-box {
@@ -294,6 +295,9 @@ a:hover {
     flex-direction: column;
     justify-content: space-between;
     transition: transform 0.2s ease, border-color 0.2s ease;
+    max-width: 450px;          /* Evita que se estire demasiado al ser un único proyecto */
+    margin: 0 auto;            /* Centrado horizontal */
+    width: 100%;
 }
 
 .project-box:hover {
