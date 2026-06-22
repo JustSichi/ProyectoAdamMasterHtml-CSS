@@ -1,0 +1,492 @@
+/* ==========================================================
+   1. RESET Y NORMALIZE
+   ========================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth; /* Desplazamiento suave para los enlaces */
+}
+
+/* ==========================================================
+   2. VARIABLES EN :ROOT (Colores, Fuentes y Dimensiones)
+   ========================================================== */
+:root {
+    --background: #000000;         /* Fondo negro puro */
+    --background-alt: #0a0a0a;     /* Fondo secundario oscuro para secciones alternas */
+    --card-bg: #141414;            /* Fondo de las cajas de proyectos y experiencia */
+    --accent: #00ff66;             /* Verde neón brillante para enlaces y detalles */
+    --text-color: #ffffff;         /* Texto principal en blanco */
+    --text-muted: #888888;         /* Texto secundario en gris */
+    --border: #222222;             /* Bordes finos oscuros */
+    --font-family: 'Inter', sans-serif;
+}
+
+/* ==========================================================
+   3. ESTILOS GENERALES
+   ========================================================== */
+body {
+    background-color: var(--background);
+    color: var(--text-color);
+    font-family: var(--font-family);
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: var(--accent);
+}
+
+/* ==========================================================
+   4. HEADER Y NAVEGACIÓN (Implementación con Flexbox)
+   ========================================================== */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    border-bottom: 1px solid var(--border);
+    z-index: 100;
+}
+
+/* Contenedor principal alineado con FLEXBOX */
+.nav-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1.2rem 2rem;
+    display: flex;             /* FLEXBOX habilitado */
+    justify-content: space-between; /* Distribuye el logo a la izquierda y enlaces a la derecha */
+    align-items: center;       /* Alinea los elementos verticalmente al centro */
+}
+
+.nav-logo {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.nav-logo:hover {
+    color: var(--accent);
+}
+
+/* Enlaces del menú alineados con FLEXBOX */
+.nav-links {
+    display: flex;             /* FLEXBOX habilitado para alinear enlaces horizontalmente */
+    gap: 1.5rem;               /* Espacio entre los enlaces */
+}
+
+.nav-links a {
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+/* ==========================================================
+   5. SECCIÓN HERO (100vh y Contenido Centrado)
+   ========================================================== */
+.hero {
+    height: 100vh;             /* Altura del 100% de la pantalla */
+    display: flex;             /* FLEXBOX habilitado */
+    flex-direction: column;    /* Distribución vertical de los elementos */
+    justify-content: center;   /* Centrado vertical */
+    align-items: center;       /* Centrado horizontal */
+    text-align: center;
+    background: radial-gradient(circle, rgba(0, 255, 102, 0.05) 0%, rgba(0,0,0,0) 70%);
+    padding: 0 1.5rem;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero-welcome {
+    font-family: 'Courier Prime', monospace;
+    color: var(--accent);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero-name {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    letter-spacing: -1px;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    border-radius: 4px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--accent);
+    color: var(--background);
+    box-shadow: 0 0 15px rgba(0, 255, 102, 0.3);
+}
+
+/* ==========================================================
+   6. ESTILOS DE SECCIONES COMUNES
+   ========================================================== */
+.section {
+    padding: 6rem 1.5rem;
+}
+
+.section-alt {
+    background-color: var(--background-alt);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.section-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+}
+
+/* Pequeña línea verde centradora debajo del título */
+.section-title::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: var(--accent);
+    margin: 0.5rem auto 0 auto;
+    border-radius: 2px;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+}
+
+.section-text {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Estilos de las imágenes en Sobre Mí */
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.about-images {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.about-img-box {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border);
+    padding: 1.2rem;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 180px;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.about-img-box:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent);
+}
+
+.about-img-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    border: 2px solid var(--border);
+    margin-bottom: 0.75rem;
+    transition: border-color 0.2s ease;
+}
+
+.about-img-box:hover img {
+    border-color: var(--accent);
+}
+
+.img-label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    font-family: 'Courier Prime', monospace;
+}
+
+.about-img-box:hover .img-label {
+    color: var(--accent);
+}
+
+/* Habilidades (Tecnologías) - FLEXBOX */
+.skills-list {
+    display: flex;             /* FLEXBOX habilitado */
+    flex-wrap: wrap;           /* Permite pasar a la línea de abajo en móviles */
+    justify-content: center;   /* Centra las burbujas */
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.skill-item {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border);
+    padding: 0.6rem 1.2rem;
+    border-radius: 20px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: border-color 0.2s ease;
+}
+
+.skill-item:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+/* ==========================================================
+   7. SECCIÓN PORTAFOLIO (Implementación con CSS Grid)
+   ========================================================== */
+.projects-container {
+    display: grid;             /* CSS GRID habilitado */
+    /* Crea columnas responsivas dinámicas, con al menos 4 elementos */
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.project-box {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border);
+    padding: 1.5rem;
+    border-radius: 6px;
+    text-align: left;
+    display: flex;             /* Usado también Flexbox interno para apilar elementos de la tarjeta */
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.project-box:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent);
+}
+
+/* Estilos para las Imágenes de los Proyectos */
+.project-image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    border-radius: 4px;
+    border: 1px solid var(--border);
+    margin-bottom: 1.25rem;
+}
+
+.project-box h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.75rem;
+}
+
+.project-box p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+/* Etiquetas del proyecto usando Flexbox */
+.project-tags {
+    display: flex;             /* Habilita Flexbox para las etiquetas del proyecto */
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.project-tags span {
+    font-size: 0.8rem;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    color: var(--text-muted);
+}
+
+/* ==========================================================
+   8. SECCIÓN EXPERIENCIA
+   ========================================================== */
+.experience-list {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.experience-box {
+    background-color: var(--card-bg);
+    border-left: 3px solid var(--accent);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 0 6px 6px 0;
+}
+
+.exp-date {
+    font-family: 'Courier Prime', monospace;
+    font-size: 0.85rem;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.experience-box h3 {
+    font-size: 1.15rem;
+    margin-bottom: 0.5rem;
+}
+
+.experience-box p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+}
+
+/* ==========================================================
+   9. SECCIÓN CONTACTO Y FORMULARIO
+   ========================================================== */
+.contact-links {
+    font-size: 1.1rem;
+    margin-bottom: 2.5rem;
+}
+
+.email-link {
+    color: var(--accent);
+    font-weight: 600;
+}
+
+/* Alineación vertical del formulario con Flexbox */
+.simple-form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;             /* FLEXBOX habilitado para la pila de inputs */
+    flex-direction: column;    /* Pila vertical */
+    gap: 1rem;
+}
+
+/* Fila de nombre y correo con CSS Grid */
+.form-row {
+    display: grid;             /* CSS GRID habilitado */
+    grid-template-columns: 1fr 1fr; /* 2 columnas iguales */
+    gap: 1rem;
+}
+
+.simple-form input,
+.simple-form textarea {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border);
+    color: var(--text-color);
+    border-radius: 4px;
+    outline: none;
+    font-size: 0.95rem;
+    transition: border-color 0.2s ease;
+}
+
+.simple-form input:focus,
+.simple-form textarea:focus {
+    border-color: var(--accent);
+}
+
+.btn-submit {
+    padding: 0.8rem;
+    background-color: var(--accent);
+    color: var(--background);
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-submit:hover {
+    background-color: #00cc44;
+    box-shadow: 0 0 10px rgba(0, 255, 102, 0.2);
+}
+
+/* ==========================================================
+   10. FOOTER (PIE DE PÁGINA)
+   ========================================================== */
+.footer {
+    text-align: center;
+    padding: 3rem 1.5rem;
+    border-top: 1px solid var(--border);
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+/* ==========================================================
+   11. DISEÑO RESPONSIVO (MEDIA QUERIES)
+   ========================================================== */
+
+/* Ajustes para tabletas y dispositivos móviles */
+@media (max-width: 768px) {
+    /* La navegación se adapta verticalmente */
+    .nav-container {
+        flex-direction: column; /* Cambia a pila vertical */
+        gap: 0.8rem;
+    }
+    
+    .nav-links {
+        gap: 1rem;
+    }
+    
+    /* Disminución sutil de tipografías */
+    .hero-name {
+        font-size: 2.75rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.3rem;
+    }
+}
+
+/* Ajustes adicionales para pantallas de móviles muy pequeñas */
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    /* El grid de entrada del formulario pasa a 1 sola columna */
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-name {
+        font-size: 2.2rem;
+    }
+}

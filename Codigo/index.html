@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio de Adam - Estudiante de Desarrollo Web">
+    <meta name="author" content="Adam Bouhamid Arramdani">
+    <meta name="keywords" content="desarrollo web, portfolio, estudiante, html, css, javascript">
+    <title>Mi Portfolio | Adam Bouhamid</title>
+    <!-- Simple, clean font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">Adam.</a>
+            <nav class="nav-links">
+                <a href="#sobre-mi">Sobre mí</a>
+                <a href="#tecnologias">Tecnologías</a>
+                <a href="#proyectos">Proyectos</a>
+                <a href="#experiencia">Experiencia</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content (Semantics) -->
+    <main>
+        <!-- Hero Section (100vh) -->
+        <section id="hero" class="hero">
+            <div class="hero-content">
+                <p class="hero-welcome">¡Hola! Mi nombre es</p>
+                <h1 class="hero-name">Adam Bouhamid</h1>
+                <p class="hero-subtitle">Estudiante de Desarrollo Web</p>
+                <a href="#proyectos" class="btn-primary">Ver mis proyectos</a>
+            </div>
+        </section>
+
+        <!-- Sobre Mí Section -->
+        <section id="sobre-mi" class="section">
+            <div class="section-container">
+                <h2 class="section-title">Sobre mí</h2>
+                <div class="about-content">
+                    <div class="about-text-block">
+                        <p class="section-text">
+                            Soy un estudiante apasionado por la tecnología y la programación. Empecé a aprender a programar hace poco y me divierte mucho crear páginas web sencillas e interactivas. Siempre estoy buscando aprender cosas nuevas, resolver problemas de lógica y mejorar mi código.
+                        </p>
+                        <p class="section-text">
+                            Me gusta trabajar en proyectos sencillos que me ayuden a afianzar mis conocimientos de HTML, CSS y JavaScript. ¡Echa un vistazo a lo que he estado haciendo!
+                        </p>
+                    </div>
+                    
+                    <div class="about-images">
+                        <div class="about-img-box">
+                            <img src="images/profile.svg" alt="Avatar que representa a Adam Bouhamid">
+                            <span class="img-label">Yo</span>
+                        </div>
+                        <div class="about-img-box">
+                            <img src="images/hobby.svg" alt="Control de videojuegos retro que representa mi pasatiempo favorito">
+                            <span class="img-label">Mi Hobby</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tecnologías Section -->
+        <section id="tecnologias" class="section section-alt">
+            <div class="section-container">
+                <h2 class="section-title">Tecnologías</h2>
+                <p class="section-subtitle">Herramientas y lenguajes que estoy aprendiendo:</p>
+                
+                <div class="skills-list">
+                    <span class="skill-item">HTML5</span>
+                    <span class="skill-item">CSS3</span>
+                    <span class="skill-item">JavaScript</span>
+                    <span class="skill-item">Git & GitHub</span>
+                    <span class="skill-item">VS Code</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Proyectos Section (CSS Grid) -->
+        <section id="proyectos" class="section">
+            <div class="section-container">
+                <h2 class="section-title">Proyectos</h2>
+                <p class="section-subtitle">Una muestra de las aplicaciones que he construido para aprender:</p>
+                
+                <div class="projects-container">
+                    <!-- Proyecto 1 (Article) -->
+                    <article class="project-box">
+                        <img class="project-image" src="images/project-todo.svg" alt="Ilustración que muestra una interfaz oscura de lista de tareas con ítems completados y pendientes">
+                        <h3>Lista de Tareas (To-Do List)</h3>
+                        <p>Una aplicación sencilla para añadir, tachar y eliminar tareas diarias. Hecha para practicar lógica básica con JavaScript.</p>
+                        <div class="project-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </article>
+
+                    <!-- Proyecto 2 (Article) -->
+                    <article class="project-box">
+                        <img class="project-image" src="images/project-cafe.svg" alt="Ilustración de la página web de una cafetería mostrando una cabecera con ofertas y productos">
+                        <h3>Landing Page de Cafetería</h3>
+                        <p>Una página estática diseñada para una cafetería ficticia. Enfoque especial en hacerla responsiva y atractiva visualmente.</p>
+                        <div class="project-tags">
+                            <span>HTML</span>
+                            <span>CSS Flexbox</span>
+                        </div>
+                    </article>
+
+                    <!-- Proyecto 3 (Article) -->
+                    <article class="project-box">
+                        <img class="project-image" src="images/project-game.svg" alt="Ilustración de una interfaz de consola web simulando un juego interactivo de adivinar un número">
+                        <h3>Juego de Adivinar Número</h3>
+                        <p>Un pequeño juego interactivo de consola en la web donde tienes que adivinar un número generado aleatoriamente.</p>
+                        <div class="project-tags">
+                            <span>HTML</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </article>
+
+                    <!-- Proyecto 4 (Article) -->
+                    <article class="project-box">
+                        <img class="project-image" src="images/project-converter.svg" alt="Ilustración de la interfaz de un conversor de divisas que muestra el resultado de euros a dólares">
+                        <h3>Conversor de Divisas</h3>
+                        <p>Una herramienta útil para calcular tasas de conversión entre diferentes monedas internacionales en tiempo real.</p>
+                        <div class="project-tags">
+                            <span>HTML</span>
+                            <span>CSS Grid</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experiencia Section -->
+        <section id="experiencia" class="section section-alt">
+            <div class="section-container">
+                <h2 class="section-title">Experiencia</h2>
+                
+                <div class="experience-list">
+                    <!-- Experiencia 1 -->
+                    <div class="experience-box">
+                        <span class="exp-date">2025 - Presente</span>
+                        <h3>Curso de Programación Web</h3>
+                        <p>Estudios enfocados en frontend y bases de datos. Desarrollo de ejercicios prácticos diarios.</p>
+                    </div>
+
+                    <!-- Experiencia 2 -->
+                    <div class="experience-box">
+                        <span class="exp-date">2024 - 2025</span>
+                        <h3>Proyectos Personales & Autoaprendizaje</h3>
+                        <p>Primeros pasos con tutoriales en línea de HTML y CSS. Creación de layouts básicos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contacto Section -->
+        <section id="contacto" class="section">
+            <div class="section-container">
+                <h2 class="section-title">Contacto</h2>
+                <p class="section-subtitle">¿Quieres charlar o tienes alguna pregunta?</p>
+                
+                <div class="contact-links">
+                    <p>Escríbeme a: <a href="mailto:adam@example.com" class="email-link">adam@example.com</a></p>
+                </div>
+
+                <!-- Simple Contact Form -->
+                <form class="simple-form" action="#" method="POST">
+                    <div class="form-row">
+                        <input type="text" name="name" required placeholder="Tu nombre">
+                        <input type="email" name="email" required placeholder="Tu correo">
+                    </div>
+                    <textarea name="message" rows="4" required placeholder="Escribe tu mensaje aquí..."></textarea>
+                    <button type="submit" class="btn-submit">Enviar Mensaje</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 Adam Bouhamid Arramdani. Hecho con 💚 por un estudiante de desarrollo.</p>
+    </footer>
+
+</body>
+
+</html>
+
