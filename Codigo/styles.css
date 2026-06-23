@@ -1,17 +1,13 @@
-/* ==========================================================
-   1. RESET Y NORMALIZE
-   ========================================================== */
+/*COLOCACION INICIAL DE TODO*/
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    /* Desplazamiento suave para los enlaces */
 }
 
-/* ==========================================================
-   2. VARIABLES
-   ========================================================== */
+/*variables esteticas*/
 :root {
     --background: #000000;
     --background-alt: #0a0a0a;
@@ -23,9 +19,8 @@
     --font-family: 'Inter', sans-serif;
 }
 
-/* ==========================================================
-   3. ESTILOS GENERALES
-   ========================================================== */
+/* estilo del body*/
+
 body {
     background-color: var(--background);
     color: var(--text-color);
@@ -39,31 +34,34 @@ a {
     transition: color 0.2s ease;
 }
 
+
 a:hover {
     color: var(--accent);
 }
 
-/* ==========================================================
-   4. HEADER Y NAV
-   ========================================================== */
+
+/*nav y header*/
+
 .navbar {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
-    border-bottom: 1px solid var(--border);
+    background: rgba(0, 0, 0, 0.9);
     z-index: 100;
+    border-bottom: 1px solid var(--border);
+
 }
 
-/* Contenedor principal alineado con FLEXBOX */
 .nav-container {
     max-width: 1000px;
+    ;
     margin: 0 auto;
     padding: 1.2rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
 }
 
 .nav-logo {
@@ -72,11 +70,11 @@ a:hover {
     color: var(--text-color);
 }
 
+
 .nav-logo:hover {
     color: var(--accent);
 }
 
-/* Enlaces del menú  */
 .nav-links {
     display: flex;
     gap: 1.5rem;
@@ -85,11 +83,11 @@ a:hover {
 .nav-links a {
     font-size: 0.95rem;
     font-weight: 500;
+
 }
 
-/* ==========================================================
-   5. SECCIÓN HERO 
-   ========================================================== */
+/* seccion principal (hero)*/
+
 .hero {
     height: 100vh;
     display: flex;
@@ -99,396 +97,4 @@ a:hover {
     text-align: center;
     background: radial-gradient(circle, rgba(0, 255, 102, 0.05) 0%, rgba(0, 0, 0, 0) 70%);
     padding: 0 1.5rem;
-}
-
-.hero-content {
-    max-width: 600px;
-}
-
-.hero-welcome {
-    font-family: 'Courier Prime', monospace;
-    color: var(--accent);
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
-}
-
-.hero-name {
-    font-size: 3.5rem;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-    letter-spacing: -1px;
-}
-
-.hero-subtitle {
-    font-size: 1.5rem;
-    color: var(--text-muted);
-    margin-bottom: 2rem;
-}
-
-.btn-primary {
-    display: inline-block;
-    padding: 0.75rem 1.5rem;
-    border: 1px solid var(--accent);
-    color: var(--accent);
-    border-radius: 4px;
-    font-weight: 600;
-    transition: all 0.2s ease;
-}
-
-.btn-primary:hover {
-    background-color: var(--accent);
-    color: var(--background);
-    box-shadow: 0 0 15px rgba(0, 255, 102, 0.3);
-}
-
-/* ==========================================================
-   6. ESTILOS DE SECCIONES COMUNES
-   ========================================================== */
-.section {
-    padding: 6rem 1.5rem;
-}
-
-.section-alt {
-    background-color: var(--background-alt);
-    border-top: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
-}
-
-.section-container {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.section-title {
-    font-size: 2.2rem;
-    margin-bottom: 1.5rem;
-    font-weight: 700;
-    position: relative;
-    display: inline-block;
-}
-
-
-.section-title::after {
-    content: '';
-    display: block;
-    width: 50px;
-    height: 3px;
-    background-color: var(--accent);
-    margin: 0.5rem auto 0 auto;
-    border-radius: 2px;
-}
-
-.section-subtitle {
-    font-size: 1.1rem;
-    color: var(--text-muted);
-    margin-bottom: 2rem;
-}
-
-.section-text {
-    font-size: 1.1rem;
-    color: var(--text-muted);
-    margin-bottom: 1.5rem;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.about-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-}
-
-.about-images {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-    margin-top: 1rem;
-}
-
-.about-img-box {
-    background-color: var(--card-bg);
-    border: 1px solid var(--border);
-    padding: 1.2rem;
-    border-radius: 8px;
-    text-align: center;
-    max-width: 180px;
-    transition: transform 0.2s ease, border-color 0.2s ease;
-}
-
-.about-img-box:hover {
-    transform: translateY(-4px);
-    border-color: var(--accent);
-}
-
-.about-img-box img {
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 2px solid var(--border);
-    margin-bottom: 0.75rem;
-    transition: border-color 0.2s ease;
-}
-
-.about-img-box:hover img {
-    border-color: var(--accent);
-}
-
-.img-label {
-    display: block;
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: var(--text-muted);
-    font-family: 'Courier Prime', monospace;
-}
-
-.about-img-box:hover .img-label {
-    color: var(--accent);
-}
-
-/* Habilidades (Tecnologías) - FLEXBOX */
-.skills-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 1rem;
-}
-
-.skill-item {
-    background-color: var(--card-bg);
-    border: 1px solid var(--border);
-    padding: 0.6rem 1.2rem;
-    border-radius: 20px;
-    font-size: 0.95rem;
-    font-weight: 500;
-    transition: border-color 0.2s ease;
-}
-
-.skill-item:hover {
-    border-color: var(--accent);
-    color: var(--accent);
-}
-
-/* ==========================================================
-   7. SECCIÓN PORTAFOLIO
-   ========================================================== */
-.projects-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 1.5rem;
-    margin-top: 2rem;
-    justify-content: center;
-}
-
-.project-box {
-    background-color: var(--card-bg);
-    border: 1px solid var(--border);
-    padding: 1.5rem;
-    border-radius: 6px;
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    transition: transform 0.2s ease, border-color 0.2s ease;
-    max-width: 450px;
-    margin: 0 auto;
-    width: 100%;
-}
-
-.project-box:hover {
-    transform: translateY(-4px);
-    border-color: var(--accent);
-}
-
-.project-image {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 16 / 10;
-    object-fit: cover;
-    border-radius: 4px;
-    border: 1px solid var(--border);
-    margin-bottom: 1.25rem;
-}
-
-.project-box h3 {
-    font-size: 1.2rem;
-    margin-bottom: 0.75rem;
-}
-
-.project-box p {
-    font-size: 0.95rem;
-    color: var(--text-muted);
-    margin-bottom: 1.5rem;
-    line-height: 1.5;
-}
-
-
-.project-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-}
-
-.project-tags span {
-    font-size: 0.8rem;
-    background-color: rgba(255, 255, 255, 0.05);
-    padding: 0.2rem 0.5rem;
-    border-radius: 3px;
-    color: var(--text-muted);
-}
-
-/* ==========================================================
-   8. SECCIÓN EXPERIENCIA
-   ========================================================== */
-.experience-list {
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: left;
-}
-
-.experience-box {
-    background-color: var(--card-bg);
-    border-left: 3px solid var(--accent);
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
-    border-radius: 0 6px 6px 0;
-}
-
-.exp-date {
-    font-family: 'Courier Prime', monospace;
-    font-size: 0.85rem;
-    color: var(--accent);
-    display: block;
-    margin-bottom: 0.5rem;
-}
-
-.experience-box h3 {
-    font-size: 1.15rem;
-    margin-bottom: 0.5rem;
-}
-
-.experience-box p {
-    font-size: 0.95rem;
-    color: var(--text-muted);
-}
-
-/* ==========================================================
-   9. SECCIÓN CONTACTO Y FORMULARIO
-   ========================================================== */
-.contact-links {
-    font-size: 1.1rem;
-    margin-bottom: 2.5rem;
-}
-
-.email-link {
-    color: var(--accent);
-    font-weight: 600;
-}
-
-.simple-form {
-    max-width: 500px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-
-.form-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-}
-
-.simple-form input,
-.simple-form textarea {
-    width: 100%;
-    padding: 0.8rem 1rem;
-    background-color: var(--card-bg);
-    border: 1px solid var(--border);
-    color: var(--text-color);
-    border-radius: 4px;
-    outline: none;
-    font-size: 0.95rem;
-    transition: border-color 0.2s ease;
-}
-
-.simple-form input:focus,
-.simple-form textarea:focus {
-    border-color: var(--accent);
-}
-
-.btn-submit {
-    padding: 0.8rem;
-    background-color: var(--accent);
-    color: var(--background);
-    border: none;
-    border-radius: 4px;
-    font-weight: 600;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.2s ease, box-shadow 0.2s ease;
-}
-
-.btn-submit:hover {
-    background-color: #00cc44;
-    box-shadow: 0 0 10px rgba(0, 255, 102, 0.2);
-}
-
-/* ==========================================================
-   10. FOOTER (PIE DE PÁGINA)
-   ========================================================== */
-.footer {
-    text-align: center;
-    padding: 3rem 1.5rem;
-    border-top: 1px solid var(--border);
-    color: var(--text-muted);
-    font-size: 0.9rem;
-}
-
-/* ==========================================================
-   11. DISEÑO RESPONSIVO (MEDIA QUERIES)
-   ========================================================== */
-
-
-@media (max-width: 768px) {
-
-    .nav-container {
-        flex-direction: column;
-        gap: 0.8rem;
-    }
-
-    .nav-links {
-        gap: 1rem;
-    }
-
-
-    .hero-name {
-        font-size: 2.75rem;
-    }
-
-    .hero-subtitle {
-        font-size: 1.3rem;
-    }
-}
-
-
-@media (max-width: 480px) {
-    .section-title {
-        font-size: 1.8rem;
-    }
-
-
-    .form-row {
-        grid-template-columns: 1fr;
-    }
-
-    .hero-name {
-        font-size: 2.2rem;
-    }
 }
